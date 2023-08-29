@@ -19,10 +19,12 @@ public class GuessServlet extends HttpServlet {
         int range = max - min + 1;
         int rand = (int)(Math.random() * range) + min;
         if(number == rand) {
-            request.getRequestDispatcher("/correct").forward(request, response);
+
+            response.sendRedirect("/correct");
         }
         else {
-            request.getRequestDispatcher("/incorrect").forward(request, response);
+
+            response.sendRedirect("/incorrect");
         }
     }
 }

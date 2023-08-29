@@ -3,6 +3,6 @@
 <head>
     <title>Title</title>
 </head>
-<body style = "background-color: ${color}">
+<body style = "background-color: ${backgroundColor}">
 </body>
 </html>
