@@ -1,6 +1,9 @@
+package models;
+
 import java.io.Serializable;
 
 public class Album implements Serializable {
+    private long id;
     private String artist;
     private String name;
     private int releaseDate;
@@ -8,6 +11,14 @@ public class Album implements Serializable {
     private String genre;
 
     public Album(){}
+
+    public Album(String artist, String name, int releaseDate, double sales, String genre) {
+        this.artist = artist;
+        this.name = name;
+        this.releaseDate = releaseDate;
+        this.sales = sales;
+        this.genre = genre;
+    }
 
     public String getArtist() {
         return artist;

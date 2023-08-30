@@ -1,3 +1,7 @@
+import models.Album;
+import models.Author;
+import models.Quote;
+
 import java.util.ArrayList;
 
 public class BeanTest {
@@ -12,14 +16,24 @@ public class BeanTest {
         Quote speech = new Quote();
         Quote yes = new Quote();
 
-        somethin.setAuthor("bob");
+        friend.setFirstName("bob");
+        friend.setLastName("hill");
+        stuff.setArtist("bob");
+        somethin.setAuthor(friend);
         somethin.setContent("somethin");
 
-        speech.setAuthor("joe");
+        buddy.setFirstName("joe");
+        buddy.setLastName("momma");
+        thangs.setArtist("joe");
+        speech.setAuthor(buddy);
         speech.setContent("speech");
 
-        yes.setAuthor("dave");
+        guy.setFirstName("dave");
+        guy.setLastName("davidson");
+        words.setArtist("dave");
         yes.setContent("yes");
+        yes.setAuthor(guy);
+
 
         ArrayList<Quote> quotes = new ArrayList<>();
         quotes.add(somethin);
