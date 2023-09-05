@@ -1,5 +1,7 @@
 package com.codeup.adlister.controllers;
 
+import com.codeup.adlister.dao.DaoFactory;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +24,9 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         // TODO: find a record in your database that matches the submitted password
+        request.setAttribute("ads", DaoFactory.getAdsDao().all());
         // TODO: make sure we find a user with that username
+
         // TODO: check the submitted password against what you have in your database
         boolean validAttempt = false;
 
